@@ -23,7 +23,7 @@ class App extends React.Component {
         numOne: sol,
         numTwo: 0,
         operator: "",
-        screenVal: sol + " ",
+        screenVal: sol,
       });
       return;
     }
@@ -36,7 +36,7 @@ class App extends React.Component {
           return {
             ...prevState,
             operator: item,
-            screenVal: `${prevState.screenVal}${item} `,
+            screenVal: `${prevState.screenVal}${item}`,
           };
         });
         return;
@@ -55,7 +55,7 @@ class App extends React.Component {
             return {
               ...prevState,
               numOne: parseInt(prevState.numOne) * 10 + parseInt(item),
-              screenVal: `${prevState.screenVal}${item} `,
+              screenVal: `${prevState.screenVal}${item}`,
             };
           });
         } else {
@@ -63,7 +63,7 @@ class App extends React.Component {
             return {
               ...prevState,
               numTwo: parseInt(prevState.numTwo) * 10 + parseInt(item),
-              screenVal: `${prevState.screenVal}${item} `,
+              screenVal: `${prevState.screenVal}${item}`,
             };
           });
         }
@@ -74,7 +74,7 @@ class App extends React.Component {
   };
 
   render() {
-    // console.log(this.state);
+    console.log(this.state);
     return (
       <Container maxWidth="sm">
         <BrowserRouter>
